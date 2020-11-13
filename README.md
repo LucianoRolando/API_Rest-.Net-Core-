@@ -18,6 +18,6 @@ Se pueden editar los datos de la cuenta, al editar los datos se vuelve a generar
 Si se quiere borrar la cuenta->"/Usuarios"[Delete]
 
 El controller Mensajes devuelte los mensajes por orden de fecha enviados entre
-el usuario que inicio secion (id token) y el usuario que corresponde al id enviado en la url->"/Mensajes/{id}"[Get]
+el usuario que inicio sesion (id token) y el usuario que corresponde al id enviado en la url->"/Mensajes/{id}"[Get]
 
 Tambien envia mensajes con->"/Mensajes/{id}"[Post]
