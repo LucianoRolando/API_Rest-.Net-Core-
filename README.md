@@ -13,7 +13,7 @@ De no estar registrado se puede registrar desde el controller-> "/Usuarios"[Post
 
 Para ver detalles de la cuenta->"/Usuarios/Editar"[Get]
 
-Se pueden editar los datos de la cuenta->"/Usuarios/Editar"[Put]
+Se pueden editar los datos de la cuenta, al editar los datos se vuelve a generar el token->"/Usuarios/Editar"[Put]
 
 Si se quiere borrar la cuenta->"/Usuarios"[Delete]
 
