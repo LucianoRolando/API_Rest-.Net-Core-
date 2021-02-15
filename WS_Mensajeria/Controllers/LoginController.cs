@@ -62,7 +62,7 @@ namespace WS_Mensajeria.Controllers
             }
         }
 
-        //En este metodo se realiza la comprobacion de los datos ingresados, no utilice procedimiento para mas seguridad
+        //En este metodo se realiza la comprobacion de los datos ingresados, no utilice procedimiento
         private Usuario AuthenticateUser(Usuario us)
         {
             Usuario Usuario = null;
