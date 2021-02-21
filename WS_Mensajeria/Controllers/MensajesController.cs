@@ -70,10 +70,10 @@ namespace WS_Mensajeria.Controllers
 
          //Estos metodos (Put y Delete) no tienen procedimientos para llevarlos a cabo
         // PUT api/<MensajesController>/5
-        [HttpPut("{id}")]
+       [HttpPut("{id}")]
         public ActionResult Put(int id, [FromBody] Mensaje mensaje)
         {
-            if (mensaje.ID == id)
+            if (mensaje.RE == id)
             {
                 contexts.Entry(mensaje).State = EntityState.Modified;
                 contexts.SaveChanges();
@@ -87,12 +87,12 @@ namespace WS_Mensajeria.Controllers
 
         // DELETE api/<MensajesController>/5
         [HttpDelete("{id}")]
-        public ActionResult Delete(int id)
+        public ActionResult Delete([FromBody] Mensaje mensaje)
         {
-            var mensaje = contexts.Mensajes.FirstOrDefault(p => p.ID == id);
-            if (mensaje != null)
+            var mje = contexts.Mensajes.FirstOrDefault(p => p.ID == mensaje.ID);
+            if (mje != null)
             {
-                contexts.Mensajes.Remove(mensaje);
+                contexts.Mensajes.Remove(mje);
                 contexts.SaveChanges();
                 return Ok();
             }
