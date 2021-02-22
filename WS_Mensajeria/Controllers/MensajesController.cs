@@ -58,7 +58,7 @@ namespace WS_Mensajeria.Controllers
 
             try
             {
-                var filasafectadas = contexts.Database.ExecuteSqlInterpolated($"[dbo].[AgregarMensaje] {mensaje.EM},{mensaje.RE},{mensaje.FECHA},{mensaje.TEXTO}");
+                contexts.Database.ExecuteSqlInterpolated($"[dbo].[AgregarMensaje] {mensaje.EM},{mensaje.RE},{mensaje.FECHA},{mensaje.TEXTO}");
 
                 return Ok();
             }
